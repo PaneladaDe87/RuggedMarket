@@ -1,5 +1,5 @@
 <?php
-  $servername = "locslhost";
+  $servername = "localhost";
   $username = "Test";
   $password = "Test";
   $dbname = "data";
@@ -9,10 +9,10 @@
     die("lol");
   }
   
-  $nome = $_POST["username"];
-  $senha = $_POST["password"];
+  $nome = $_GET["nome"];
+  $senha = $_GET["senha"];
   
-  $sql = "SELECT * FROM server WHERE username = '$username' AND password = '$password'";
+  $sql = "SELECT * FROM server WHERE nome = '$nome' AND senha = '$senha'";
   
   if($conn->query($sql) === TRUE) {
     echo("lol1.0");
